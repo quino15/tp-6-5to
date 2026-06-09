@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+class Triangulo
+{
+    private:
+        int lado1;
+        int lado2;
+        int lado_base;
+    public:
+        void inicializar();
+        void imprimir();
+        void esMayorEdad();
+};
+
+void Triangulo::inicializar()
+{
+    cout <<"Ingrese el lado 1:";
+    cin >> lado1;
+    cout <<"Ingrese el lado 2:";
+    cin >> lado2;
+    cout << "Ingrese el lado de la base: ";
+    cin >> lado_base;
+}
+void Triangulo::imprimir()
+{
+    if(lado1 == lado2 and lado2 == lado_base)
+    {
+        cout << "Todos los lados son iguales";
+        cout << endl << "El triangulo es equilatero";
+    }
+    else
+    {
+        if(lado1 > lado2 and lado1 > lado_base)
+        {
+            cout << "El lado 1 es el mayor: " << lado1 << " cm";
+        }
+        if(lado2 > lado1 and lado2 > lado_base)
+        {
+            cout << "El lado 2 es el mayor: " << lado1 << " cm";
+        }
+        if(lado_base > lado2 and lado_base > lado1)
+        {
+            cout << "El lado base es el mayor: " << lado_base << " cm";
+        }
+        cout << endl << "El triangulo no es equilatero";
+    }
+}
+
+int main()
+//realizado por Sansolini
+{
+    Triangulo triangulo;
+    triangulo.inicializar();
+    triangulo.imprimir();
+    return 0;
+}
